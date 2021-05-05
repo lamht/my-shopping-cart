@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 import { AngularFireAuth } from "@angular/fire/auth";
 import { Router } from "@angular/router";
-import * as firebase from "firebase/app";
+import firebase from 'firebase/app';
+import 'firebase/auth';
 import { BehaviorSubject, Observable } from "rxjs";
 import { filter, map } from "rxjs/operators";
 
@@ -12,7 +13,7 @@ export const ANONYMOUS_USER: User = new User();
 
 @Injectable()
 export class AuthService {
-  user: Observable<firebase.User>;
+  user: Observable<any>;
 
   private subject = new BehaviorSubject<User>(undefined);
 
@@ -82,10 +83,6 @@ export class AuthService {
   }
 
   signInRegular(email: string, password: string) {
-    const credential = firebase.auth.EmailAuthProvider.credential(
-      email,
-      password
-    );
     return this.firebaseAuth.signInWithEmailAndPassword(email, password);
   }
 

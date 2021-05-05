@@ -49,7 +49,7 @@
             *ngFor="
               let product of productList
                 | filterByBrand: selectedBrand
-                | paginate: { itemsPerPage: 6, currentPage: page }
+               
             "
           >
             <div class="item">
@@ -132,11 +132,11 @@
           </div>
         </div>
         <!-- Pagination -->
-        <div class="text-center mt-3">
+        <!-- <div class="text-center mt-3">
           <pagination-controls
             (pageChange)="page = $event"
           ></pagination-controls>
-        </div>
+        </div> -->
       </div>
       <!--/.Card-->
     </div>
