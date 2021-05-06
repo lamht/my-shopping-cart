@@ -6,7 +6,7 @@ import {
 } from "@angular/fire/database";
 import { Product } from "../models/product";
 // import { AuthService } from "./auth.service";
-import { ToastrService } from "./toastr.service";
+import { MyToastrService } from "./toastr.service";
 
 @Injectable()
 export class ProductService {
@@ -20,7 +20,7 @@ export class ProductService {
   constructor(
     private db: AngularFireDatabase,
     // private authService: AuthService,
-    private toastrService: ToastrService
+    private toastrService: MyToastrService
   ) {}
 
   getProducts() {

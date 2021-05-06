@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from "@angular/core";
-
-declare var moment: any;
+import * as moment from 'moment';
 
 @Pipe({
   name: "momentTimeAgo",

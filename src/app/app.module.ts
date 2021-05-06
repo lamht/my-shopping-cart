@@ -9,6 +9,7 @@ import { IndexModule } from './views/base/index/index.module';
 import { ProductModule } from './views/pages/product/product.module';
 import { UserModule } from './views/pages/user/user.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 /* to load and set en.json as the default application language */
 export function setupTranslateFactory(service: TranslateService) {
@@ -25,7 +26,8 @@ export function setupTranslateFactory(service: TranslateService) {
     ProductModule,
     UserModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     TranslateService,

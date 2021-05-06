@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Product } from "../../../../shared/models/product";
 // import { AuthService } from "../../../../shared/services/auth.service";
 import { ProductService } from "../../../../shared/services/product.service";
-import { ToastrService } from "src/app/shared/services/toastr.service";
+import { MyToastrService } from "src/app/shared/services/toastr.service";
 @Component({
   selector: "app-product-list",
   templateUrl: "./product-list.component.html",
@@ -19,7 +19,7 @@ export class ProductListComponent implements OnInit {
   constructor(
     // public authService: AuthService,
     private productService: ProductService,
-    private toastrService: ToastrService
+    private toastrService: MyToastrService
   ) {}
 
   ngOnInit() {

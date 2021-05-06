@@ -13,12 +13,14 @@ import { IndexComponent } from "./index.component";
 import { LoginComponent } from "./login/login.component";
 import { FooterComponent } from "./footer/footer.component";
 import { NavbarComponent } from "./navbar/navbar.component";
+import { CarouselModule } from "ngx-owl-carousel-o";
 
 @NgModule({
   imports: [
     CommonModule,
     ProductModule,
     SharedModule,
+    CarouselModule,
     RouterModule.forChild(IndexRoutes),
   ],
   declarations: [
